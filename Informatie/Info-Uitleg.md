@@ -2,7 +2,6 @@
 
 **Team:** Luuk Daniel, Timo van Eck, Ruben Anninga  
 **Klas:** 24A  
-**Datum:** 27/02/2025  
 
 ## Samenvatting  
 Developerland gebruikt nu een fysiek takenbord, maar dit werkt niet goed omdat veel managers thuiswerken. Ze willen een digitale takenlijst waar taken per afdeling worden gesorteerd. Er zijn zes afdelingen, en taken moeten ook op deadline gesorteerd kunnen worden. Gebruikers moeten taken kunnen aanmaken, aanpassen en verwijderen.  
