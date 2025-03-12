@@ -20,9 +20,9 @@
         } ?>
 
         <?php
-            require_once '../backend/config/conn.php';
+            require_once 'backend/conn.php';
 
-            $query = "SELECT * FROM meldingen";
+            $query = "SELECT * FROM takenlijst";
             $statement = $conn->prepare($query);
             $statement->execute();
             $meldingen = $statement->fetchAll(PDO::FETCH_ASSOC);
