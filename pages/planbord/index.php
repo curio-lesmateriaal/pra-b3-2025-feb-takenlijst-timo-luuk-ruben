@@ -12,7 +12,7 @@
 
     <div class="container">
         <h1>Placeholder</h1>
-        <a href="create.php">Placeholder &gt;</a>
+        <a href="create.php">Create &gt;</a>
 
         <?php if(isset($_GET['msg'])) 
         {
