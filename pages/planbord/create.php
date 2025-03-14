@@ -11,23 +11,37 @@
     <form action="../../app/Http/Controllers/planbordController.php" method="post" style="width: fit-content; margin: auto; transform: translateX(-15%);">
 
         <div class="form-group">
-            <label for="title">Titel: </label>
-            <input type="text" name="title" id="title">
+            <label for="title">Titel:</label>
+            <input type="text" name="title" id="title" required>
         </div>
 
         <div class="form-group">
-            <label for="type">Type: </label>
-            <input type="text" name="type" id="type">
+            <label for="description">Beschrijving:</label>
+            <textarea name="description" id="description" cols="30" rows="4"></textarea>
         </div>
 
         <div class="form-group">
-            <label for="deadline">Deadline: </label>
-            <input type="date" name="deadline" id="deadline">
+            <label for="department">Afdeling:</label>
+            <input type="text" name="department" id="department" required>
         </div>
 
         <div class="form-group">
-            <label for="makeOn">Maken op: </label>
-            <input type="date" name="makeOn" id="makeOn">
+            <label for="status">Status:</label>
+            <select name="status" id="status" required>
+                <option value="To-do">Te doen</option>
+                <option value="In-progress">Mee Bezig</option>
+                <option value="Done">Klaar</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="deadline">Deadline:</label>
+            <input type="datetime-local" name="deadline" id="deadline">
+        </div>
+
+        <div class="form-group">
+            <label for="user">Gebruiker:</label>
+            <input type="number" name="user" id="user">
         </div>
 
         <label for="create"></label>
