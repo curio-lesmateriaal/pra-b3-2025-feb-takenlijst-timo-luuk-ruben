@@ -18,12 +18,12 @@ $query = "INSERT INTO taken (titel, beschrijving, afdeling, status, deadline, us
 
 $statement = $conn->prepare($query);
 $statement->execute([
-    ":title" => $titel, 
-    ":beschrijving" => $beschrijving, 
-    ":afdeling" => $afdeling, 
-    ":status" => $status, 
-    ":deadline" => $deadline,
-    ":user" => $user, 
+    ":title"            => $titel, 
+    ":beschrijving"     => $beschrijving, 
+    ":afdeling"         => $afdeling, 
+    ":status"           => $status, 
+    ":deadline"         => $deadline,
+    ":user"             => $user
 ]);
 
 header("Location: ../../../pages/planbord/index.php?msg=Taak toegevoegd");
