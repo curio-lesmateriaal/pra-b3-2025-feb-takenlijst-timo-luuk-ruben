@@ -16,6 +16,7 @@
     <style>html {font-family: lato;}</style>
 </head>
 <body>
+    <a href="index.php">terug</a>
     <form action="../../app/Http/Controllers/planbordController.php" method="post" style="width: fit-content; margin: auto; transform: translateX(-15%);">
 
         <div class="form-group">
