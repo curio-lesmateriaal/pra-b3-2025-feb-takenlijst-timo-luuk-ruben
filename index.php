@@ -22,35 +22,35 @@
         <?php
             require_once 'backend/conn.php';
 
-            $query = "SELECT * FROM takenlijst";
+            $query = "SELECT * FROM taken";
             $statement = $conn->prepare($query);
             $statement->execute();
-            $meldingen = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $taken = $statement->fetchAll(PDO::FETCH_ASSOC);
         ?>
 
         <table>
             <tr>
-                <th>Placeholder</th>
-                <th>Placeholder</th>
-                <th>Placeholder</th>
-                <th>Placeholder</th>
-                <th>Placeholder</th>
-                <th>Placeholder</th>
-                <th>Placeholder</th>
-                <th>Placeholder</th>
-                <th>Placeholder</th>
+                <th>Titel</th>
+                <th>Beschrijving</th>
+                <th>Afdeling</th>
+                <th>Status</th>
+                <th>Deadline</th>
+                <th>User</th>
+                <th>Created at</th>
+                <!--<th>Placeholder</th>-->
+                <!--<th>Placeholder</th>-->
             </tr>
 
-            <?php foreach($Placeholder as $Placeholder): ?>
+            <?php foreach($taken as $taak): ?>
                 <tr>
-                    <td><?php echo $Placeholder['Placeholder']; ?></td>
-                    <td><?php echo $Placeholder['Placeholder']; ?></td>
-                    <td><?php echo $Placeholder['Placeholder']; ?></td>
-                    <td><?php echo $Placeholder['Placeholder']; ?></td>
-                    <td><?php echo $Placeholder['Placeholder']; ?></td>
-                    <td><?php echo $Placeholder['Placeholder']; ?></td>
-                    <td><?php echo $Placeholder['Placeholder']; ?></td>
-                    <td><?php echo $Placeholder['Placeholder']; ?></td>
+                    <td><?php echo $taak['titel']; ?></td>
+                    <td><?php echo $taak['beschrijving']; ?></td>
+                    <td><?php echo $taak['afdeling']; ?></td>
+                    <td><?php echo $taak['status']; ?></td>
+                    <td><?php echo $taak['deadline']; ?></td>
+                    <td><?php echo $taak['user']; ?></td>
+                    <td><?php echo $taak['created_at']; ?></td>
+                    <!--<td><?php echo $taak['Placeholder']; ?></td>-->
                     <td><a href="Placeholder.php?id=<?php echo $Placeholder['Placeholder']; ?>">Placeholder</a></td>
                 </tr>
             <?php endforeach; ?>
