@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="../../public_html/assets/css/normalize.css">
-    <link rel="stylesheet" href="../../public_html/assets/css/main.css">
+    <link rel="stylesheet" href="../public_html/css/normalize.css">
+    <link rel="stylesheet" href="../public_html/css/main.css">
 </head>
 <body>
     <?php require_once '../resources/views/components/header.php'; ?>

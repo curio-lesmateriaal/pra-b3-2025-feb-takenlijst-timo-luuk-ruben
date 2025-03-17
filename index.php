@@ -21,8 +21,8 @@
     <!-- Header -->
     <header>
         <div class="header">
-            <a href="../../pra_b3/index.php">Home</a>
-            <a href="../../../pra_b3/pages/planbord/index.php">Planbord</a>
+            <a href="index.php">Home</a>
+            <a href="../../../pra_b3/pages/planbord/planbord.php">Planbord</a>
             <a href="../../../pra_b3/pages/contact.php">Contact</a>
         </div>
     </header>
