@@ -1,4 +1,4 @@
-<?php require_once __DIR__.'../../../backend/config.php'; ?>
+<?php require_once 'backend/config.php'; ?>
 <!doctype html>
 <html lang="nl">
 
@@ -6,8 +6,8 @@
     <title>Planbord/Index</title>
 
     <!--CSS-->
-    <link rel="stylesheet" href="../../public_html/css/main.css">
-    <link rel="stylesheet" href="../../public_html/css/normalize.css">
+    <link rel="stylesheet" href="public_html/css/main.css">
+    <link rel="stylesheet" href="public_html/css/normalize.css">
 
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
 
 <body>
 
-    <?php require_once __DIR__.'../../../resources/views/components/header.php'; ?>
+    <?php require_once 'resources/views/components/header.php'; ?>
 
     <div class="container">
         <h1>Placeholder</h1>
@@ -30,7 +30,7 @@
         } ?>
 
         <?php
-            require_once '../../backend/conn.php';
+            require_once 'backend/conn.php';
 
             $query = "SELECT * FROM taken";
             $statement = $conn->prepare($query);

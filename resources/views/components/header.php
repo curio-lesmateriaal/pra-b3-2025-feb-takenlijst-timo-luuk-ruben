@@ -1,7 +1,7 @@
 <header>
     <div class="header">
-        <a href="../../index.php">Index</a>
-        <a href="../../../pra_b3/pages/planbord/planbord.php">Planbord</a>
-        <a href="../../../pra_b3/pages/contact.php">Contact</a>
+        <a href="index.php">Index</a>
+        <a href="planbord.php">Planbord</a>
+        <a href="contact.php">Contact</a>
     </div>
 </header>

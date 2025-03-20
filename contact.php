@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="../public_html/css/normalize.css">
-    <link rel="stylesheet" href="../public_html/css/main.css">
+    <link rel="stylesheet" href="public_html/css/normalize.css">
+    <link rel="stylesheet" href="public_html/css/main.css">
 </head>
 <body>
-    <?php require_once '../resources/views/components/header.php'; ?>
+    <?php require_once 'resources/views/components/header.php'; ?>
     <main>
         <section class="contact-intro">
             <h1 class="section-title">Contact</h1>
@@ -27,5 +27,5 @@
         </div>
     </main>
 </body>
-<?php require_once '../resources/views/components/footer.php'; ?>
+<?php require_once 'resources/views/components/footer.php'; ?>
 </html>
