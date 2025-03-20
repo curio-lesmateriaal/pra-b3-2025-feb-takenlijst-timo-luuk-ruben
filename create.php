@@ -66,7 +66,7 @@
     </div>
 
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> Planbord. Alle rechten voorbehouden.</p>
+        <?php require_once __DIR__.'./resources/views/components/footer.php'; ?>
     </footer>
 </body>
 </html>
