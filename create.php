@@ -66,7 +66,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2023 Planbord. Alle rechten voorbehouden.</p>
+        <p>&copy; <?php echo date("Y"); ?> Planbord. Alle rechten voorbehouden.</p>
     </footer>
 </body>
 </html>
