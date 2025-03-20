@@ -61,7 +61,7 @@
                     <td><?php echo $taak['user']; ?></td>
                     <td><?php echo $taak['created_at']; ?></td>
                     <!--<td><?php echo $taak['Placeholder']; ?></td>-->
-                    <td><a href="create.php?id=<?php echo $taak['id'];?>">Create</a></td>
+                    <!--<td><a href="create.php?id=<?php echo $taak['id'];?>">Create</a></td>-->
                 </tr>
             <?php endforeach; ?>
         </table>

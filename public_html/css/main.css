@@ -414,6 +414,7 @@
   
   .button:hover {
     background-color: #2ecc71; /* Groen */
+    color: white;
   }
   
   /* Berichtstijl */

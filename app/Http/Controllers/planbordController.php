@@ -26,4 +26,4 @@ $statement->execute([
     ":user"             => $user
 ]);
 
-header("Location: ../../../pages/planbord/index.php?msg=Taak toegevoegd");
+header("Location: ../../../planbord.php?msg=Taak toegevoegd");
