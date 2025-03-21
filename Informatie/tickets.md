@@ -21,7 +21,7 @@
 2. **Taken per Afdeling**
    - Filter taken op afdeling.
 3. **Inloggen**
-   - Inlogpagina en sessiebeheer.
+   - Inlogpagina en sessiebeheer(niet hoge prior).
 4. **Beveiligde Pagina's**
    - Alleen toegankelijk voor ingelogde gebruikers.
 5. **User-ID Opslaan bij Nieuwe Taak**
