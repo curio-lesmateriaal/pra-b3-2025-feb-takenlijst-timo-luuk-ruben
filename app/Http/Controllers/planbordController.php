@@ -56,3 +56,18 @@ if($action == "update") {
 
     header("Location: ../../../planbord.php?msg=Taak aangepast");
 }
+
+if($action == "delete") {
+    // Variabele
+    $id               = $_POST['id'];
+
+    // 2. Query
+    $query = "DELETE FROM taken WHERE id = :id";
+
+    $statement = $conn->prepare($query);
+    $statement->execute([
+        ":id"            => $id
+    ]);
+
+    header("Location: ../../../planbord.php?msg=Taak Succesvol Verwijderd");
+}

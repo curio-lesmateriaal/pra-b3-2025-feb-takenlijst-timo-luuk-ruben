@@ -78,6 +78,13 @@
                 <input type="submit" value="Wijziging Opslaan" class="button">
             </div>
         </form>
+        <hr color="lightblue">
+        <form action="app/Http/Controllers/planbordController.php">
+            <input type="hidden" name="action" id="action" value="delete">
+            <input type="hidden" name="id" value="<?php echo $taak['id']; ?>">
+            
+            <input type="submit" name="delete" value="Verwijder" class="button">
+        </form>
     </div>
 
     <footer>

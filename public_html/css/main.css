@@ -361,4 +361,5 @@
 .button:hover {
   background-color: #2ecc71; /* Groen */
   color: #fff;
+  cursor: pointer;
 }
