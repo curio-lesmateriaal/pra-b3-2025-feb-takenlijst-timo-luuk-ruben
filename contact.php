@@ -30,6 +30,7 @@
                     <h3>Contactgegevens</h3>
                     <p>Heb je een vraag, of werkt wat niet? Neem dan contact met ons op via onderstaande gegevens.</p>
                     <p class="email-link"><a href="mailto:info@developerland.nl">info@developerland.nl</a></p>
+                    <p>telfoon: 0161-25 58 22 96</p>
                 </div>
             </div>
         </div>
