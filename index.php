@@ -23,11 +23,11 @@
         <p class="intro">Vind hier uw taken en blijf georganiseerd. Onze website helpt u om al uw taken efficiënt te beheren en bij te houden.</p>
 
         <!-- Link naar Takenoverzicht -->
-        <a href="planbord.php" class="button">Naar het Takenoverzicht &gt;</a>
+        <a href="planbord.php" class="button button-index">Naar het Takenoverzicht &gt;</a>
 
         <!-- Bericht weergeven als er een is -->
         <?php if(isset($_GET['msg'])): ?>
-            <div class="msg"><?php echo htmlspecialchars($_GET['msg']); ?></div> <!-- Voorkom XSS-aanvallen -->
+            <div class="msg"><?php echo htmlspecialchars($_GET['msg']); ?></div>
         <?php endif; ?>
     </main>
 

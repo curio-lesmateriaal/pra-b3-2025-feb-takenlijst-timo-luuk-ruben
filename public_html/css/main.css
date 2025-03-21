@@ -1,324 +1,278 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+html {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  font-family: 'Lato', sans-serif;
+}
 
-/* ==========================================================================
-   Base styles
-   ========================================================================== */
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-   html {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-    font-family: 'Lato', sans-serif;
-  }
-  
-  body {
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  /* ==========================================================================
-     Header
-     ========================================================================== */
-  
-  header {
-    background-color: #3498db; /* Blauw */
-    padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
+header {
+  background-color: #3498db;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header a:hover {
+  background-color: #2ecc71;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #2ecc71;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2ecc71;
+  text-decoration: underline;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.form-group {
+  margin: 1rem 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #2ecc71;
+  outline: none;
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-table th,
+.task-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #3498db;
+}
+
+.task-table th {
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+}
+
+.task-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.task-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.contact-intro {
+  background-color: #3498db;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-intro h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.contact-intro p {
+  color: #2c3e50;
+  font-size: 1.2em;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.info-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.info-card h3 {
+  color: #2c3e50;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.info-card p {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.email-link a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.email-link a:hover {
+  color: #2ecc71;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
   .header {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
   }
-  
+
   .header a {
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .header a:hover {
-    background-color: #2ecc71; /* Groen */
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* ==========================================================================
-     Footer
-     ========================================================================== */
-  
-  footer {
-    background-color: #3498db; /* Blauw */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: auto;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  footer p {
     margin: 5px 0;
-    font-size: 0.9em;
-  }
-  
-  footer a {
-    color: #2ecc71; /* Groen */
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  /* ==========================================================================
-     Container
-     ========================================================================== */
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-  }
-  
-  /* ==========================================================================
-     Typography
-     ========================================================================== */
-  
-  h1, h2, h3 {
-    color: #2c3e50; /* Donkerblauw */
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-  }
-  
-  h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-  }
-  
-  a {
-    color: #3498db; /* Blauw */
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #2ecc71; /* Groen */
-    text-decoration: underline;
-  }
-  
-  /* ==========================================================================
-     Buttons
-     ========================================================================== */
-  
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3498db; /* Blauw */
-    color: #fff;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #2ecc71; /* Groen */
-    color: #fff;
-  }
-  
-  /* ==========================================================================
-     Forms
-     ========================================================================== */
-  
-  .form-group {
-    margin: 1rem 0;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #2c3e50; /* Donkerblauw */
-  }
-  
-  .form-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #3498db; /* Blauw */
-    border-radius: 5px;
-    font-size: 1em;
-    transition: border-color 0.3s ease;
-  }
-  
-  .form-input:focus {
-    border-color: #2ecc71; /* Groen */
-    outline: none;
-  }
-  
-  textarea.form-input {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  /* ==========================================================================
-     Tables
-     ========================================================================== */
-  
-  .task-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .task-table th,
-  .task-table td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #3498db; /* Blauw */
-  }
-  
-  .task-table th {
-    background-color: #3498db; /* Blauw */
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  .task-table tr:hover {
-    background-color: #f5f5f5;
-  }
-  
-  .task-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  /* ==========================================================================
-     Contact Page
-     ========================================================================== */
-  
-  .contact-intro {
-    background-color: #3498db; /* Blauw */
-    color: #fff;
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  .contact-intro h1 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-  }
-  
-  .contact-intro p {
-    color: #2c3e50;
-    font-size: 1.2em;
-  }
-  
-  .contact-info {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-  }
-  
-  .info-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .info-card h3 {
-    color: #2c3e50; /* Donkerblauw */
-    font-size: 1.8em;
-    margin-bottom: 15px;
-  }
-  
-  .info-card p {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .email-link a {
-    color: #3498db; /* Blauw */
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .email-link a:hover {
-    color: #2ecc71; /* Groen */
-    text-decoration: underline;
-  }
-  
-  /* ==========================================================================
-     Responsive Design
-     ========================================================================== */
-  
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .header a {
-      margin: 5px 0;
-    }
-  
-    .container {
-      width: 100%;
-      padding: 15px;
-    }
-  
-    h1 {
-      font-size: 2em;
-    }
-  
-    h2 {
-      font-size: 1.8em;
-    }
-  
-    h3 {
-      font-size: 1.3em;
-    }
-  
-    .task-table {
-      display: block;
-      overflow-x: auto;
-    }
   }
 
-  /* ==========================================================================
-   Homepage
-   ========================================================================== */
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  .task-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
 
 .homepage-header {
   text-align: center;
@@ -332,7 +286,7 @@
 }
 
 .homepage-header h1 {
-  color: #2c3e50; /* Donkerblauw */
+  color: #2c3e50;
   font-size: 2.5em;
   margin-bottom: 10px;
 }
@@ -347,7 +301,7 @@
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #3498db; /* Blauw */
+  background-color: #3498db;
   color: #fff;
   border-radius: 5px;
   text-align: center;
@@ -359,7 +313,75 @@
 }
 
 .button:hover {
-  background-color: #2ecc71; /* Groen */
+  background-color: #2ecc71;
   color: #fff;
   cursor: pointer;
+}
+.msg {
+  padding: 20px 30px;
+  background-color: #2ecc71;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+  opacity: 0;
+  font-size: 1.2em;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+.button-container {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 1.1em;
+}
+
+.button:hover {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+/* ==========================================================================
+   Homepage Knop (Midden van de pagina)
+   ========================================================================== */
+
+   .button-index {
+    display: block;
+    margin: 40px auto; /* Centreer de knop horizontaal en voeg wat ruimte toe */
+    width: fit-content;
+    text-align: center;
 }
