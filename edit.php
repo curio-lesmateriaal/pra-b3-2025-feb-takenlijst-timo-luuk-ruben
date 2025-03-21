@@ -39,6 +39,7 @@
         <h1>Taak Aanpassen</h1>
         <form action="app/Http/Controllers/planbordController.php" method="post">
             <input type="hidden" name="action" id="action" value="update">
+            <input type="hidden" name="id" id="id" value="<?php echo $taak['id']; ?>">
 
             <div class="form-group">
                 <label for="title">Titel:</label>

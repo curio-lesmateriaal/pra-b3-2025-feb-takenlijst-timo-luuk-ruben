@@ -38,6 +38,7 @@ if($action == "update") {
     $status             = $_POST['status'];
     $deadline           = $_POST['deadline'];
     $user               = $_POST['user'];
+    $id                 = $_POST['id'];
 
 
     // 2. Query
@@ -53,6 +54,7 @@ if($action == "update") {
         ":status"           => $status, 
         ":deadline"         => $deadline,
         ":user"             => $user,
+        ":id"               => $id
     ]);
 
     header("Location: ../../../planbord.php?msg=Taak aangepast");
