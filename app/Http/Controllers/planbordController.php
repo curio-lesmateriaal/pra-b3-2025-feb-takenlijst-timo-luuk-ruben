@@ -42,7 +42,8 @@ if($action == "update") {
 
     // 2. Query
     $query = "UPDATE taken 
-              SET titel = :titel, beschrijving = :beschrijving, afdeling = :afdeling, status = :status, deadline = :deadline, user = :user";
+              SET titel = :titel, beschrijving = :beschrijving, afdeling = :afdeling, status = :status, deadline = :deadline, user = :user
+              WHERE id = :id";
 
     $statement = $conn->prepare($query);
     $statement->execute([
@@ -51,7 +52,7 @@ if($action == "update") {
         ":afdeling"         => $afdeling, 
         ":status"           => $status, 
         ":deadline"         => $deadline,
-        ":user"             => $user
+        ":user"             => $user,
     ]);
 
     header("Location: ../../../planbord.php?msg=Taak aangepast");
