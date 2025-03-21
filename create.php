@@ -23,6 +23,8 @@
     <div class="container">
         <h1>Nieuwe Taak Toevoegen</h1>
         <form action="app/Http/Controllers/planbordController.php" method="post">
+        <input type="hidden" name="action" id="action" value="create">
+
             <div class="form-group">
                 <label for="title">Titel:</label>
                 <input type="text" name="title" id="title" class="form-input" required>

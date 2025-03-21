@@ -38,7 +38,7 @@
     <div class="container">
         <h1>Nieuwe Taak Toevoegen</h1>
         <form action="app/Http/Controllers/planbordController.php" method="post">
-            <input type="hidden" name="action" value="update">
+            <input type="hidden" name="action" id="action" value="update">
 
             <div class="form-group">
                 <label for="title">Titel:</label>
