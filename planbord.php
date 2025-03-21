@@ -3,7 +3,7 @@
 <html lang="nl">
 
 <head>
-    <title>Planbord/Index</title>
+    <title>Planbord - Index</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="public_html/css/main.css">
@@ -21,8 +21,8 @@
     <?php require_once 'resources/views/components/header.php'; ?>
 
     <div class="container">
-        <h1>Placeholder</h1>
-        <a href="create.php">Create &gt;</a>
+        <h1>Planbord</h1>
+        <a href="create.php" class="button">Nieuwe Taak Toevoegen &gt;</a>
 
         <?php if(isset($_GET['msg'])) 
         {
@@ -38,35 +38,36 @@
             $taken = $statement->fetchAll(PDO::FETCH_ASSOC);
         ?>
 
-        <table>
-            <tr style="text-align: left;">
-                <th>Titel</th>
-                <th>Beschrijving</th>
-                <th>Afdeling</th>
-                <th>Status</th>
-                <th>Deadline</th>
-                <th>User</th>
-                <th>Created at</th>
-                <!--<th>Placeholder</th>-->
-                <!--<th>Placeholder</th>-->
-            </tr>
-
-            <?php foreach($taken as $taak): ?>
+        <table class="task-table">
+            <thead>
                 <tr>
-                    <td><?php echo $taak['titel']; ?></td>
-                    <td><?php echo $taak['beschrijving']; ?></td>
-                    <td><?php echo $taak['afdeling']; ?></td>
-                    <td><?php echo $taak['status']; ?></td>
-                    <td><?php echo $taak['deadline']; ?></td>
-                    <td><?php echo $taak['user']; ?></td>
-                    <td><?php echo $taak['created_at']; ?></td>
-                    <!--<td><?php echo $taak['Placeholder']; ?></td>-->
-                    <!--<td><a href="create.php?id=<?php echo $taak['id'];?>">Create</a></td>-->
+                    <th>Titel</th>
+                    <th>Beschrijving</th>
+                    <th>Afdeling</th>
+                    <th>Status</th>
+                    <th>Deadline</th>
+                    <th>Gebruiker</th>
+                    <th>Aangemaakt op</th>
                 </tr>
-            <?php endforeach; ?>
+            </thead>
+            <tbody>
+                <?php foreach($taken as $taak): ?>
+                    <tr>
+                        <td><?php echo $taak['titel']; ?></td>
+                        <td><?php echo $taak['beschrijving']; ?></td>
+                        <td><?php echo $taak['afdeling']; ?></td>
+                        <td><?php echo $taak['status']; ?></td>
+                        <td><?php echo $taak['deadline']; ?></td>
+                        <td><?php echo $taak['user']; ?></td>
+                        <td><?php echo $taak['created_at']; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
         </table>
 
     </div>
+
+    <?php require_once 'resources/views/components/footer.php'; ?>
 
 </body>
 

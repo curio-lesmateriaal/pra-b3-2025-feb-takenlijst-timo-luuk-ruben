@@ -18,7 +18,7 @@
 <body>
     <header>
         <div class="header">
-            <a href="index.php">Terug</a>
+            <a href="index.php">Terug</a> 
         </div>
     </header>
 
@@ -66,7 +66,7 @@
     </div>
 
     <footer>
-        <?php require_once __DIR__.'./resources/views/components/footer.php'; ?>
-    </footer>
+</body>
+    <?php require_once 'resources/views/components/footer.php'; ?>
 </body>
 </html>
