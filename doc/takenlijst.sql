@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `taken` (
   `beschrijving` text NOT NULL,
   `afdeling` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL DEFAULT 'todo',
-  `deadline` date DEFAULT NULL,
+  `deadline` datetime DEFAULT NULL,
   `user` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
