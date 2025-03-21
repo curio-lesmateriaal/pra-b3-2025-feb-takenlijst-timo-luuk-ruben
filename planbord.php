@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lavishly+Yours&family=Lexend:wght@100..900&family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
     <style>html {font-family: lato;}</style>
+
+    <!--Font Awesome--><script src="https://kit.fontawesome.com/d1041f8226.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -46,6 +48,7 @@
                     <th>Deadline</th>
                     <th>Gebruiker</th>
                     <th>Aangemaakt op</th>
+                    <th>Aanpassen</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,6 +61,7 @@
                         <td><?php echo $taak['deadline']; ?></td>
                         <td><?php echo $taak['user']; ?></td>
                         <td><?php echo $taak['created_at']; ?></td>
+                        <td style="text-align: center;"><a href="edit.php?id=<?php echo $taak['id'];?>"><i class="fa-solid fa-pen-to-square"></i></a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
