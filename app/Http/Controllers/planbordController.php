@@ -30,7 +30,7 @@ if($action == "create") {
     header("Location: ../../../planbord.php?msg=Taak toegevoegd");
 }
 
-if($action == "create") {
+if($action == "update") {
     // Variabele
     $titel              = $_POST['title'];
     $beschrijving       = $_POST['description'];

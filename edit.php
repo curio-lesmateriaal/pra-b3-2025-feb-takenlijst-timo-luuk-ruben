@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planbord - Create</title>
+    <title>Planbord - Edit</title>
     
     <link rel="stylesheet" href="public_html/css/main.css">
     <link rel="stylesheet" href="public_html/css/normalize.css">
@@ -36,7 +36,7 @@
     ?>
 
     <div class="container">
-        <h1>Nieuwe Taak Toevoegen</h1>
+        <h1>Taak Aanpassen</h1>
         <form action="app/Http/Controllers/planbordController.php" method="post">
             <input type="hidden" name="action" id="action" value="update">
 
@@ -75,7 +75,7 @@
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Update" class="button">
+                <input type="submit" value="Wijziging Opslaan" class="button">
             </div>
         </form>
     </div>
