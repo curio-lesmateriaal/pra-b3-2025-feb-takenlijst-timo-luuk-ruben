@@ -18,7 +18,7 @@
         <a href="create.php" class="button">Start met taken toevoegen &gt;</a>
 
         <?php if(isset($_GET['msg'])): ?>
-            <div class="msg"><?php echo htmlspecialchars($_GET['msg']); ?></div>
+            <div class="msg"><?php echo htmlspecialchars($_GET['msg']); ?></div> <!-- htmlspecialchars is used to convert special characters to HTML entities. -->
         <?php endif; ?>
     </main>
 
