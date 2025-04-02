@@ -59,11 +59,12 @@
             <div class="form-group">
                 <label for="status">Status:</label>
                 <select name="status" id="status" class="form-input" required>
-                    <option value="To-do">Te doen</option>
-                    <option value="In-progress">Mee Bezig</option>
-                    <option value="Done">Klaar</option>
+                    <option value="To-do" <?php echo ($taak['status'] == 'To-do') ? 'selected' : ''; ?>>Te doen</option>
+                    <option value="In-progress" <?php echo ($taak['status'] == 'In-progress') ? 'selected' : ''; ?>>Mee Bezig</option>
+                    <option value="Done" <?php echo ($taak['status'] == 'Done') ? 'selected' : ''; ?>>Klaar</option>
                 </select>
             </div>
+
 
             <div class="form-group">
                 <label for="deadline">Deadline:</label>
