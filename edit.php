@@ -40,7 +40,7 @@
         <form action="app/Http/Controllers/planbordController.php" method="post">
             <input type="hidden" name="action" id="action" value="update">
             <input type="hidden" name="id" id="id" value="<?php echo $taak['id']; ?>">
-            
+
             <div class="form-group">
                 <label for="title">Titel:</label>
                 <input type="text" name="title" id="title" class="form-input" value="<?php echo $taak['titel'] ?>" required>
@@ -48,49 +48,49 @@
 
             <div class="form-group">
                 <label for="description">Beschrijving:</label>
-                <textarea name="description" id="description" class="form-input" required><?php echo $taak['beschrijving'] ?></textarea>
+                <textarea name="description" id="description" cols="30" rows="4" class="form-input"><?php echo $taak['beschrijving'] ?></textarea>
             </div>
 
             <div class="form-group">
                 <label for="department">Afdeling:</label>
-                <select name="department" id="department" class="form-input" required>
-                    <option value="Sales" <?php echo ($taak['afdeling'] == 'Sales') ? 'selected' : ''; ?>>Sales</option>
-                    <option value="Marketing" <?php echo ($taak['afdeling'] == 'Marketing') ? 'selected' : ''; ?>>Marketing</option>
-                    <option value="IT" <?php echo ($taak['afdeling'] == 'IT') ? 'selected' : ''; ?>>IT</option>
-                    <option value="HR" <?php echo ($taak['afdeling'] == 'HR') ? 'selected' : ''; ?>>HR</option>
-                </select>
+                <input type="text" name="department" id="department" class="form-input" value="<?php echo $taak['afdeling'] ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="status">Status:</label>
                 <select name="status" id="status" class="form-input" required>
-                    <option value="To-do" <?php echo ($taak['status'] == 'To-do') ? 'selected' : ''; ?>>To-do</option>
-                    <option value="In-progress" <?php echo ($taak['status'] == 'In-progress') ? 'selected' : ''; ?>>In-progress</option>
-                    <option value="Done" <?php echo ($taak['status'] == 'Done') ? 'selected' : ''; ?>>Done</option>
+                    <option value="To-do" <?php echo ($taak['status'] == 'To-do') ? 'selected' : ''; ?>>Te doen</option>
+                    <option value="In-progress" <?php echo ($taak['status'] == 'In-progress') ? 'selected' : ''; ?>>Mee Bezig</option>
+                    <option value="Done" <?php echo ($taak['status'] == 'Done') ? 'selected' : ''; ?>>Klaar</option>
                 </select>
             </div>
 
+
             <div class="form-group">
                 <label for="deadline">Deadline:</label>
-                <input type="datetime-local" name="deadline" id="deadline" class="form-input" 
-                       value="<?php echo $taak['deadline'] ? date('Y-m-d\TH:i', strtotime($taak['deadline'])) : ''; ?>">
+                <input type="datetime-local" name="deadline" id="deadline" class="form-input" value="<?php echo $taak['deadline']?>">
             </div>
 
             <div class="form-group">
                 <label for="user">Gebruiker:</label>
-                <input type="text" name="user" id="user" class="form-input" value="<?php echo $taak['user'] ?>" required>
+                <input type="number" name="user" id="user" class="form-input" value="<?php echo $taak['user'] ?>">
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Opslaan" class="button">
+                <input type="submit" value="Wijziging Opslaan" class="button">
             </div>
         </form>
-
-        <form action="app/Http/Controllers/planbordController.php" method="post" onsubmit="return confirm('Weet je zeker dat je deze taak wilt verwijderen?');">
-            <input type="hidden" name="action" value="delete">
+        <hr color="lightblue">
+        <form action="app/Http/Controllers/planbordController.php">
+            <input type="hidden" name="action" id="action" value="delete">
             <input type="hidden" name="id" value="<?php echo $taak['id']; ?>">
-            <input type="submit" value="Verwijderen" class="button delete-button">
+            
+            <input type="submit" name="delete" value="Verwijder" class="button">
         </form>
     </div>
+
+    <footer>
+</body>
+    <?php require_once 'resources/views/components/footer.php'; ?>
 </body>
 </html>

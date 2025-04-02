@@ -82,6 +82,6 @@ if($action == "delete") {
     exit();
 }
 
-// Als geen goede actie
+// Als geen geldige actie
 header("Location: ../../../planbord.php?msg=Ongeldige actie");
 exit();
