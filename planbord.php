@@ -14,7 +14,6 @@
 <body>
     <?php require_once 'resources/views/components/header.php'; ?>
 
-    <!-- Melding onder de header -->
     <?php if(isset($_GET['msg'])): ?>
         <div class="msg"><?php echo htmlspecialchars($_GET['msg']); ?></div>
     <?php endif; ?>
@@ -22,12 +21,10 @@
     <div class="container">
                 <h1>Planbord</h1>
 
-        <!-- Nieuwe Taak Toevoegen Knop -->
         <div class="button-container">
             <a href="create.php" class="button">Nieuwe Taak Toevoegen &gt;</a>
         </div>
 
-        <!-- Takenoverzicht -->
         <?php
             require_once 'backend/conn.php';
             $query = "SELECT * FROM taken";
