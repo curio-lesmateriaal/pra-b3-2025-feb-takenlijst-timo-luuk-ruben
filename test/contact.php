@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Planbord</title>
 
-    <link rel="stylesheet" href="public_html/css/normalize.css">
-    <link rel="stylesheet" href="public_html/css/main.css">
+    <link rel="stylesheet" href="../public_html/css/normalize.css">
+    <link rel="stylesheet" href="../public_html/css/main.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     <style>html {font-family: lato;}</style>
 </head>
 <body>
-    <?php require_once 'resources/views/components/header.php'; ?>
+    <?php require_once '../resources/views/components/header.php'; ?>
 
     <main>
         <section class="contact-intro">
