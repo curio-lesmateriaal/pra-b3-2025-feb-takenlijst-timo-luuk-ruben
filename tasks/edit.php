@@ -68,7 +68,7 @@
 
             <div class="form-group">
                 <label for="deadline">Deadline:</label>
-                <input type="datetime" name="deadline" id="deadline" class="form-input" value="<?php echo $taak['deadline']?>">
+                <input type="date" name="deadline" id="deadline" class="form-input" value="<?php echo $taak['deadline']?>">
             </div>
 
             <div class="form-group">
