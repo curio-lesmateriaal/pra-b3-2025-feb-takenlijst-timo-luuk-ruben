@@ -11,11 +11,11 @@
 - [ ] Inputvalidatie.
 - [ ] Testen met verschillende input.
 
-### 1.2 Takenoverzicht (status ≠ done)
+### 1.2 Takenoverzicht (status NIET done)
 - [ ] Overzicht tonen met titel, afdeling, status.
 - [ ] Query met `status <> 'done'`.
 
-### 1.5 Takenoverzicht (status = done)
+### 1.5 Takenoverzicht (status WEL done)
 - [ ] `tasks/done.php` met titel en H1.
 - [ ] Link vanuit `tasks/index.php` en terug.
 - [ ] Query: `SELECT * WHERE status = 'done'`.
