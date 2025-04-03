@@ -1,3 +1,7 @@
+<?php 
+require_once '../backend/config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planbord - Create</title>
     
-    <link rel="stylesheet" href="public_html/css/main.css">
-    <link rel="stylesheet" href="public_html/css/normalize.css">
+    <link rel="stylesheet" href="../public_html/css/main.css">
+    <link rel="stylesheet" href="../public_html/css/normalize.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,13 +20,13 @@
 <body>
     <header>
         <div class="header">
-            <a href="index.php">Terug</a> 
+            <a href="<?php echo $base_url; ?>/index.php">Terug</a> 
         </div>
     </header>
 
     <div class="container">
         <h1>Nieuwe Taak Toevoegen</h1>
-        <form action="app/Http/Controllers/planbordController.php" method="post">
+        <form action="<?php echo $base_url; ?>/app/Http/Controllers/planbordController.php" method="post">
         <input type="hidden" name="action" id="action" value="create">
 
             <div class="form-group">
@@ -51,12 +55,12 @@
 
             <div class="form-group">
                 <label for="deadline">Deadline:</label>
-                <input type="datetime-local" name="deadline" id="deadline" class="form-input">
+                <input type="date" name="deadline" id="deadline" class="form-input">
             </div>
 
             <div class="form-group">
                 <label for="user">Gebruiker:</label>
-                <input type="number" name="user" id="user" class="form-input">
+                <input type="text" name="user" id="user" class="form-input">
             </div>
 
             <div class="form-group">
@@ -67,6 +71,6 @@
 
     <footer>
 </body>
-    <?php require_once 'resources/views/components/footer.php'; ?>
+    <?php require_once '../resources/views/components/footer.php'; ?>
 </body>
 </html>

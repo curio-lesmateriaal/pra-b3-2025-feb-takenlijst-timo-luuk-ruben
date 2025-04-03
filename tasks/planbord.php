@@ -1,10 +1,10 @@
-<?php require_once 'backend/config.php'; ?>
+<?php require_once '../backend/config.php'; ?>
 <!doctype html>
 <html lang="nl">
 <head>
     <title>Planbord - Index</title>
-    <link rel="stylesheet" href="public_html/css/main.css">
-    <link rel="stylesheet" href="public_html/css/normalize.css">
+    <link rel="stylesheet" href="../public_html/css/main.css">
+    <link rel="stylesheet" href="../public_html/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lavishly+Yours&family=Lexend:wght@100..900&family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/d1041f8226.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <?php require_once 'resources/views/components/header.php'; ?>
+    <?php require_once '../resources/views/components/header.php'; ?>
 
     <?php if(isset($_GET['msg'])): ?>
         <div class="msg"><?php echo htmlspecialchars($_GET['msg']); ?></div>
@@ -26,8 +26,8 @@
         </div>
 
         <?php
-            require_once 'backend/conn.php';
-            $query = "SELECT * FROM taken";
+            require_once '../backend/conn.php';
+            $query = "SELECT * FROM taken ORDER BY deadline ASC";
             $statement = $conn->prepare($query);
             $statement->execute();
             $taken = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -63,6 +63,6 @@
         </table>
     </div>
 
-    <?php require_once 'resources/views/components/footer.php'; ?>
+    <?php require_once '..//resources/views/components/footer.php'; ?>
 </body>
 </html>

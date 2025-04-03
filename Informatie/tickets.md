@@ -2,18 +2,8 @@
 
 ## Sprint 1
 
-### 1.1 Nieuwe taak aanmaken
-- [ ] Map `tasks/` met `index.php` en `create.php`.
-- [ ] Link van `index.php` naar `create.php`.
-- [ ] Formulier in `create.php` (titel, beschrijving, afdeling).
-- [ ] `tasksController.php` met `$action` en if-statements.
-- [ ] INSERT-query in de controller.
-- [ ] Inputvalidatie.
-- [ ] Testen met verschillende input.
-
 ### 1.2 Takenoverzicht (status NIET done)
 - [ ] Overzicht tonen met titel, afdeling, status.
-- [ ] Query met `status <> 'done'`.
 
 ### 1.5 Takenoverzicht (status WEL done)
 - [ ] `tasks/done.php` met titel en H1.

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php require_once __DIR__.'./resources/views/components/header.php'; ?>
+    <?php require_once __DIR__.'/resources/views/components/header.php'; ?>
 
     <main class="container">
         <div class="homepage-header">
@@ -20,13 +20,13 @@
 
         <p class="intro">Vind hier uw taken en blijf georganiseerd. Onze website helpt u om al uw taken efficiënt te beheren en bij te houden.</p>
 
-        <a href="planbord.php" class="button button-index">Naar het Takenoverzicht &gt;</a>
+        <a href="tasks/planbord.php" class="button button-index">Naar het Takenoverzicht &gt;</a>
 
         <?php if(isset($_GET['msg'])): ?>
             <div class="msg"><?php echo htmlspecialchars($_GET['msg']); ?></div>
         <?php endif; ?>
     </main>
 
-    <?php require_once __DIR__.'./resources/views/components/footer.php'; ?>
+    <?php require_once __DIR__.'/resources/views/components/footer.php'; ?>
 </body>
 </html>

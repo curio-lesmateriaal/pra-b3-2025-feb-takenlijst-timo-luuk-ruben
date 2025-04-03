@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planbord - Edit</title>
     
-    <link rel="stylesheet" href="public_html/css/main.css">
-    <link rel="stylesheet" href="public_html/css/normalize.css">
+    <link rel="stylesheet" href="../public_html/css/main.css">
+    <link rel="stylesheet" href="../public_html/css/normalize.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,12 +18,12 @@
 <body>
     <header>
         <div class="header">
-            <a href="index.php">Terug</a> 
+            <a href="../index.php">Terug</a> 
         </div>
     </header>
 
     <?php
-        require_once 'backend/conn.php';
+        require_once '../backend/conn.php';
 
         $id = $_GET['id'];
 
@@ -37,7 +37,7 @@
 
     <div class="container">
         <h1>Taak Aanpassen</h1>
-        <form action="app/Http/Controllers/planbordController.php" method="post">
+        <form action="../app/Http/Controllers/planbordController.php" method="post">
             <input type="hidden" name="action" id="action" value="update">
             <input type="hidden" name="id" id="id" value="<?php echo $taak['id']; ?>">
 
@@ -68,12 +68,12 @@
 
             <div class="form-group">
                 <label for="deadline">Deadline:</label>
-                <input type="datetime-local" name="deadline" id="deadline" class="form-input" value="<?php echo $taak['deadline']?>">
+                <input type="datetime" name="deadline" id="deadline" class="form-input" value="<?php echo $taak['deadline']?>">
             </div>
 
             <div class="form-group">
                 <label for="user">Gebruiker:</label>
-                <input type="number" name="user" id="user" class="form-input" value="<?php echo $taak['user'] ?>">
+                <input type="text" name="user" id="user" class="form-input" value="<?php echo $taak['user'] ?>">
             </div>
 
             <div class="form-group">
@@ -81,7 +81,7 @@
             </div>
         </form>
         <hr color="lightblue">
-        <form action="app/Http/Controllers/planbordController.php">
+        <form action="../app/Http/Controllers/planbordController.php">
             <input type="hidden" name="action" id="action" value="delete">
             <input type="hidden" name="id" value="<?php echo $taak['id']; ?>">
             
@@ -91,6 +91,6 @@
 
     <footer>
 </body>
-    <?php require_once 'resources/views/components/footer.php'; ?>
+    <?php require_once '../resources/views/components/footer.php'; ?>
 </body>
 </html>
