@@ -21,6 +21,7 @@ require_once '../backend/config.php';
     <header>
         <div class="header">
             <a href="<?php echo $base_url; ?>/index.php">Terug</a> 
+            <?php session_start(); ?>
         </div>
     </header>
 
@@ -60,7 +61,7 @@ require_once '../backend/config.php';
 
             <div class="form-group">
                 <label for="user">Gebruiker:</label>
-                <input type="text" name="user" id="user" class="form-input">
+                <input type="text" name="user" id="user" class="form-input" value="<?php if(isset($_SESSION['user_id'])) { echo $_SESSION['username']; } ?>">
             </div>
 
             <div class="form-group">
