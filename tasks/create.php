@@ -47,9 +47,9 @@ require_once '../backend/config.php';
             <div class="form-group">
                 <label for="status">Status:</label>
                 <select name="status" id="status" class="form-input" required>
-                    <option value="To-do">Te doen</option>
-                    <option value="In-progress">Mee Bezig</option>
-                    <option value="Done">Klaar</option>
+                    <option value="Te-doen">Te doen</option>
+                    <option value="Mee-bezig">Mee Bezig</option>
+                    <option value="Klaar">Klaar</option>
                 </select>
             </div>
 

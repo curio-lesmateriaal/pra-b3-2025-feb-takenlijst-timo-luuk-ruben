@@ -59,7 +59,7 @@
 
             $statement = $conn->prepare($query);
 
-            if(isset($status)) {
+            if(isset($status) && $status != "") {
                 $statement->execute([
                     ":status" => $status
                 ]);
