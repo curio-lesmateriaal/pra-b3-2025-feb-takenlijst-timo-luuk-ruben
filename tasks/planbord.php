@@ -47,6 +47,7 @@
 
         <!-- Takenoverzicht -->
         <?php
+            //Filter functionaliteit
             // Verbinding
             require_once '../backend/conn.php';
 
@@ -59,7 +60,7 @@
 
             $statement = $conn->prepare($query);
 
-            if(isset($status)) {
+            if(isset($status) && $status != "") {
                 $statement->execute([
                     ":status" => $status
                 ]);
