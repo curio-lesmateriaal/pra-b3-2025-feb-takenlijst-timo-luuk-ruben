@@ -407,3 +407,7 @@ textarea.form-input {
 .button[href="niet_done.php"] {
     background-color: #dc3545; 
 }
+
+.form-select {
+  padding: 5px 20px;
+}
