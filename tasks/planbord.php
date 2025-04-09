@@ -39,9 +39,7 @@
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <button type="submit">Filter</button>
-                </div>
+                <button type="submit" class="button">Filter Toepassen</button>
             </form>
         </div>
 

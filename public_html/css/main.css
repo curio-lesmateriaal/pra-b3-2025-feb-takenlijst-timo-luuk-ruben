@@ -408,6 +408,7 @@ textarea.form-input {
     background-color: #dc3545; 
 }
 
-.form-select {
-  padding: 5px 20px;
+#form-select {
+  width: 20%;
+  text-align: left;
 }
