@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="nl">
 <head>
-    <title>Planbord - Index</title>
+    <title>Planbord - Done</title>
     <link rel="stylesheet" href="../public_html/css/main.css">
     <link rel="stylesheet" href="../public_html/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,17 +19,11 @@
     <?php endif; ?>
 
     <div class="container">
-        <h1>Planbord</h1>
-
-        <div class="button-container">
-            <a href="create.php" class="button">Nieuwe Taak Toevoegen &gt;</a>
-            <a href="done.php" class="button">Done Taken &gt;</a>
-            <a href="niet_done.php" class="button">Niet Done Taken &gt;</a>
-        </div>
+        <h1>Done Taken</h1>
 
         <?php
             require_once '../backend/conn.php';
-            $query = "SELECT * FROM taken ORDER BY deadline ASC";
+            $query = "SELECT * FROM taken WHERE status = 'Done' ORDER BY deadline ASC";
             $statement = $conn->prepare($query);
             $statement->execute();
             $taken = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -45,7 +39,6 @@
                     <th>Deadline</th>
                     <th>Gebruiker</th>
                     <th>Aangemaakt op</th>
-                    <th>Aanpassen</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,7 +51,6 @@
                         <td><?php echo $taak['deadline']; ?></td>
                         <td><?php echo $taak['user']; ?></td>
                         <td><?php echo $taak['created_at']; ?></td>
-                        <td style="text-align: center;"><a href="edit.php?id=<?php echo $taak['id']; ?>"><i class="fa-solid fa-pen-to-square"></i></a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
