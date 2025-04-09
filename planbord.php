@@ -47,6 +47,7 @@
 
         <!-- Takenoverzicht -->
         <?php
+            //Filter functionaliteit
             // Verbinding
             require_once 'backend/conn.php';
 
