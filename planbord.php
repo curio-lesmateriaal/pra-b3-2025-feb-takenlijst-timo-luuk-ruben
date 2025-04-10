@@ -29,7 +29,7 @@
             <form action="" method="get">
 
                 <div class="form-group">
-                    <select name="status" id="form-select">
+                    <select name="status" class="form-select">
                         <?php $status = $_GET['status'] ?>
 
                         <option value="">-Selecteer een optie-</option>

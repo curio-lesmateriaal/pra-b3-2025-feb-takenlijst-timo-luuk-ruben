@@ -24,7 +24,7 @@ if($action == "create") {
         ":user"             => $user
     ]);
 
-    header("Location: $base_url/tasks/planbord.php?msg=Taak toegevoegd");
+    header("Location: $base_url/tasks/planbord.php?msg=Taak ($titel) toegevoegd");
     exit();
 }
 
@@ -53,12 +53,12 @@ if($action == "update") {
         ":id"               => $id
     ]);
 
-    header("Location: $base_url/tasks/planbord.php?msg=Taak aangepast");
+    header("Location: $base_url/tasks/planbord.php?msg=Taak ($titel) aangepast");
     exit();
 }
 
 if($action == "delete") {
-    $id = $_GET['id'] ?? $_POST['id'];
+    $id             = $_GET['id'] ?? $_POST['id'];
 
     if (!$id) {
         header("Location: $base_url/tasks/planbord.php?msg=Geen taak-ID ontvangen");

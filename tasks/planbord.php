@@ -32,43 +32,73 @@
                     <select name="status" id="form-select">
                         <?php $status = $_GET['status'] ?>
 
-                        <option value="">-Selecteer een optie-</option>
+                        <option value="">Alles</option>
                         <option value="Te-doen"         <?php if ($status == 'Te-doen')     { echo 'selected'; }; ?>>Te doen</option>
                         <option value="Mee-bezig"       <?php if ($status == 'Mee-bezig')   { echo 'selected'; }; ?>>Mee bezig</option>
-                        <option value="Klaar"           <?php if ($status == 'Klaar')       { echo 'selected'; }; ?>> Klaar</option>
+                        <option value="Klaar"           <?php if ($status == 'Klaar')       { echo 'selected'; }; ?>>Klaar</option>
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <button type="submit">Filter</button>
-                </div>
+                <button type="submit" class="button">Filter Toepassen</button>
             </form>
         </div>
 
         <!-- Takenoverzicht -->
         <?php
-            //Filter functionaliteit
+            // Filter functionaliteit
             // Verbinding
             require_once '../backend/conn.php';
 
-            if(isset($status) && $status != "") {
-                $query = "SELECT * FROM taken WHERE status = :status";
-            }
-            if (!isset($status) || $status == "") {
-                $query = "SELECT * FROM taken";
-            }
-
-            $statement = $conn->prepare($query);
-
-            if(isset($status) && $status != "") {
+            if(isset($_SESSION['user_id'])) {
+                $query = "SELECT username FROM users WHERE username = :username";
+                $statement = $conn->prepare($query);
                 $statement->execute([
-                    ":status" => $status
+                    ":username" => $_SESSION['username']
                 ]);
+                $current_user = $statement->fetch(PDO::FETCH_ASSOC);
+
+                if(isset($status) && $status != "") {
+                    $query = "SELECT * FROM taken WHERE status = :status AND user = :user ORDER BY deadline DESC";
+                }
+                if (!isset($status) || $status == "") {
+                    $query = "SELECT * FROM taken WHERE user = :user ORDER BY deadline DESC";
+                }
+    
+                $statement = $conn->prepare($query);
+    
+                if(isset($status) && $status != "") {
+                    $statement->execute([
+                        ":status" => $status, 
+                        ":user"   => $current_user['username']
+                    ]);
+                }
+                else {
+                    $statement->execute([
+                        ":user"   => $current_user['username']
+                    ]);
+                }
+                $taken = $statement->fetchAll(PDO::FETCH_ASSOC);
             }
             else {
-                $statement->execute();
+                if(isset($status) && $status != "") {
+                    $query = "SELECT * FROM taken WHERE status = :status ORDER BY deadline DESC";
+                }
+                if (!isset($status) || $status == "") {
+                    $query = "SELECT * FROM taken ORDER BY deadline DESC";
+                }
+    
+                $statement = $conn->prepare($query);
+    
+                if(isset($status) && $status != "") {
+                    $statement->execute([
+                        ":status" => $status
+                    ]);
+                }
+                else {
+                    $statement->execute();
+                }
+                $taken = $statement->fetchAll(PDO::FETCH_ASSOC);
             }
-            $taken = $statement->fetchAll(PDO::FETCH_ASSOC);
         ?>
 
         <table class="task-table">
