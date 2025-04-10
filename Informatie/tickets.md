@@ -36,6 +36,7 @@
 - [ ] `user-id` uit SESSION opslaan in `tasks`-tabel.
 
 ### 2.6 Taken per gebruiker
-- [ ] `tasks/my.php` tonen taken van ingelogde gebruiker.
-- [ ] WHERE-filter met `user-id` uit SESSION.
-- [ ] Link van/tot overzicht.
+- [ ] Zorg ervoor dat taken per user kunnen gedaan worden en dat elke user ingelogd hun eigen taken kan zien
+
+### 2.7 ID naar naam
+- [ ] Zorg ervoor dat de ID naar een naam wordt omgezet en zictbaar is als naam in de tabel
