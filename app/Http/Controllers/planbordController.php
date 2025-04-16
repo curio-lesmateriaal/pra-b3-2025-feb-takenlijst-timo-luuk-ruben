@@ -9,10 +9,11 @@ if($action == "create") {
     $afdeling           = $_POST['department'];
     $status             = $_POST['status'];
     $deadline           = $_POST['deadline'];
-    $user               = $_POST['user'];
 
     $query = "INSERT INTO taken (titel, beschrijving, afdeling, status, deadline, user, created_at)
               VALUES (:titel, :beschrijving, :afdeling, :status, :deadline, :user, NOW())";
+
+    $user = $_SESSION['user_id'];
 
     $statement = $conn->prepare($query);
     $statement->execute([
