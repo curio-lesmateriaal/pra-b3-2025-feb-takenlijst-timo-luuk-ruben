@@ -24,7 +24,7 @@
 
         <!-- Nieuwe Taak Toevoegen Knop -->
         <div class="button-container">
-            <a href="create.php" class="button">Nieuwe Taak Toevoegen &gt;</a>
+            <a href="tasks/create.php" class="button">Nieuwe Taak Toevoegen &gt;</a>
 
             <form action="" method="get">
 
@@ -57,6 +57,8 @@
             if (!isset($status) || $status == "") {
                 $query = "SELECT * FROM taken";
             }
+
+            $query = "SELECT * FROM taken";
 
             $statement = $conn->prepare($query);
 

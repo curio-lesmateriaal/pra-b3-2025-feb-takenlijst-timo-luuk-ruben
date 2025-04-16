@@ -4,7 +4,7 @@ session_start();
 $action             = $_POST['action'];
 
 $username           = $_POST['username'];
-$email              = $_POST['email'];
+// $email              = $_POST['email'];
 $password           = $_POST['password'];
 // echo $attractie . " / " . $capaciteit . " / " . $melder;
 
@@ -24,7 +24,7 @@ if($action == "login") {
         die("Geen actieve herinneringen aan dit account.");
     }
     if(!password_verify($password, $user['password'])) {
-        header("Location: ../../../login.php?error=Wachtwoord onjuist");
+        // header("Location: ../../../login.php?error=Wachtwoord onjuist");
         die("Wachtwoord onjuist.");
     }
 
