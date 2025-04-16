@@ -121,7 +121,7 @@
                         <td><?php echo $taak['beschrijving']; ?></td>
                         <td><?php echo $taak['afdeling']; ?></td>
                         <td><?php echo $taak['status']; ?></td>
-                        <td><?php echo $taak['deadline']; ?></td>
+                        <td <?php if (date("Y-m-d") > $taak['deadline']) { echo "style='color: red;'";} ?>><?php echo $taak['deadline']; ?></td>
                         <td><?php echo $taak['user']; ?></td>
                         <td><?php echo $taak['created_at']; ?></td>
                         <td style="text-align: center;"><a href="edit.php?id=<?php echo $taak['id']; ?>"><i class="fa-solid fa-pen-to-square"></i></a></td>

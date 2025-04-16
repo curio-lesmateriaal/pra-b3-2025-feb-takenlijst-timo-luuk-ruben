@@ -56,7 +56,7 @@ require_once '../backend/config.php';
 
             <div class="form-group">
                 <label for="deadline">Deadline:</label>
-                <input type="date" name="deadline" id="deadline" class="form-input">
+                <input type="date" name="deadline" id="deadline" class="form-input" value="<?php echo date("Y-m-d") ?>">
             </div>
 
             <div class="form-group">
