@@ -58,10 +58,10 @@
                 $current_user = $statement->fetch(PDO::FETCH_ASSOC);
 
                 if(isset($status) && $status != "") {
-                    $query = "SELECT * FROM taken WHERE status = :status AND user = :user ORDER BY deadline DESC";
+                    $query = "SELECT * FROM taken WHERE status = :status AND user = :user ORDER BY deadline ASC";
                 }
                 if (!isset($status) || $status == "") {
-                    $query = "SELECT * FROM taken WHERE user = :user ORDER BY deadline DESC";
+                    $query = "SELECT * FROM taken WHERE user = :user ORDER BY deadline ASC";
                 }
     
                 $statement = $conn->prepare($query);
@@ -81,10 +81,10 @@
             }
             else {
                 if(isset($status) && $status != "") {
-                    $query = "SELECT * FROM taken WHERE status = :status ORDER BY deadline DESC";
+                    $query = "SELECT * FROM taken WHERE status = :status ORDER BY deadline ASC";
                 }
                 if (!isset($status) || $status == "") {
-                    $query = "SELECT * FROM taken ORDER BY deadline DESC";
+                    $query = "SELECT * FROM taken ORDER BY deadline ASC";
                 }
     
                 $statement = $conn->prepare($query);
