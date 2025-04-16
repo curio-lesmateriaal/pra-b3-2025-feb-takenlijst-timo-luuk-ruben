@@ -117,7 +117,7 @@
             <tbody>
                 <?php foreach($taken as $taak): ?>
                     <tr>
-                        <td><?php echo $taak['titel']; ?></td>
+                        <td><?php echo ucfirst($taak['titel']); ?></td>
                         <td><?php echo $taak['beschrijving']; ?></td>
                         <td><?php echo $taak['afdeling']; ?></td>
                         <td><?php echo $taak['status']; ?></td>
