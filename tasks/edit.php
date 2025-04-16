@@ -18,7 +18,7 @@
 <body>
     <header>
         <div class="header">
-            <a href="../index.php">Terug</a> 
+            <a href="planbord.php">Terug</a> 
         </div>
     </header>
 
