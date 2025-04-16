@@ -132,8 +132,8 @@
         </table>
     </div>
 <?php else: ?>
-    <a href="<?php echo $base_url;?>/login.php" class="button" style="margin: auto;">Log in om taken te bekijken</a>
-<?php endif?>
+    <a href="<?php echo $base_url;?>/login.php" class="button" style="margin: 20px auto;">Log in om taken te bekijken</a>
+<?php endif; ?>
     <?php require_once '../resources/views/components/footer.php'; ?>
 </body>
 </html>
