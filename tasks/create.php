@@ -20,7 +20,7 @@ require_once '../backend/config.php';
 <body>
     <header>
         <div class="header">
-            <a href="<?php echo $base_url; ?>/index.php">Terug</a> 
+            <a href="<?php echo $base_url; ?>index.php">Terug</a> 
             <?php session_start(); ?>
         </div>
     </header>
