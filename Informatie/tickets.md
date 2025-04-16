@@ -10,9 +10,6 @@
 - [ ] GET-parameter `afdeling` uitlezen.
 - [ ] WHERE-filter in query.
 
-### 2.3 Inloggen
-- [ ] Fix login taken niet zichtbaar (maar wel zichtbaar wanneer je uitlogt?)
-
 ### 2.4 Pagina’s beveiligen
 - [ ] Alleen toegankelijk voor ingelogde gebruikers.
 
