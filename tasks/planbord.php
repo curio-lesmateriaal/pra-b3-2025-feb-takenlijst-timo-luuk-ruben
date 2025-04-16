@@ -23,6 +23,7 @@
                 <h1>Planbord</h1>
 
         <!-- Nieuwe Taak Toevoegen Knop -->
+    <?php if (isset($_SESSION['user_id'])): ?>
         <div class="button-container">
             <a href="create.php" class="button">Nieuwe Taak Toevoegen &gt;</a>
 
@@ -130,7 +131,9 @@
             </tbody>
         </table>
     </div>
-
+<?php else: ?>
+    <a href="<?php echo $base_url;?>/login.php" class="button" style="margin: auto;">Log in om taken te bekijken</a>
+<?php endif?>
     <?php require_once '../resources/views/components/footer.php'; ?>
 </body>
 </html>

@@ -25,6 +25,7 @@ require_once '../backend/config.php';
         </div>
     </header>
 
+    <?php if(isset($_SESSION['user_id'])): ?>
     <div class="container">
         <h1>Nieuwe Taak Toevoegen</h1>
         <form action="<?php echo $base_url; ?>/app/Http/Controllers/planbordController.php" method="post">
@@ -69,7 +70,10 @@ require_once '../backend/config.php';
             </div>
         </form>
     </div>
+<?php else: ?>
+    <a href="<?php echo $base_url;?>/login.php" class="button" style="margin: auto;">Log in om taken te bekijken</a>
 
+<?php endif; ?>
     <footer>
 </body>
     <?php require_once '../resources/views/components/footer.php'; ?>

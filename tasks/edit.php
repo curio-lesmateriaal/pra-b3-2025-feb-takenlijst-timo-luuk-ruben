@@ -21,7 +21,7 @@
             <a href="planbord.php">Terug</a> 
         </div>
     </header>
-
+<?php if(isset($_SESSION['user_id'])): ?>
     <?php
         require_once '../backend/conn.php';
 
@@ -88,7 +88,10 @@
             <input type="submit" name="delete" value="Verwijder" class="button">
         </form>
     </div>
+<?php else: ?>
+    <a href="<?php echo $base_url;?>/login.php" class="button" style="margin: auto;">Log in om taken te bekijken</a>
 
+<?php endif; ?>
     <footer>
 </body>
     <?php require_once '../resources/views/components/footer.php'; ?>
